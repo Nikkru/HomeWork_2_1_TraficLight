@@ -16,8 +16,6 @@ class ViewController: UIViewController {
     var attention: Float = 0.2
     var stop: Float = 1
     
-   
-    
     @IBOutlet weak var redTraficLightView: UIView!
     @IBOutlet weak var yellowTraficLightView: UIView!
     @IBOutlet weak var greenTraficLightView: UIView!
@@ -26,30 +24,23 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-       redTraficLightView.layer.opacity = off
-                     yellowTraficLightView.layer.opacity = off
-                  greenTraficLightView.layer.opacity = off
-        
-       
+        redTraficLightView.layer.opacity = off
+        yellowTraficLightView.layer.opacity = off
+        greenTraficLightView.layer.opacity = off
         
         redTraficLightView.layer.cornerRadius = CGFloat(Int(redTraficLightView.frame.size.height)/2)
         yellowTraficLightView.layer.cornerRadius = CGFloat(Int(yellowTraficLightView.frame.size.height)/2)
         greenTraficLightView.layer.cornerRadius = CGFloat(Int(greenTraficLightView.frame.size.height)/2)
-        
-    
-//                    redTraficLightView.layer.opacity = go
-//        yellowTraficLightView.layer.opacity = attention
-//        greenTraficLightView.layer.opacity = stop
-        
     }
     
-
     @IBAction func controllTraficLightButton(_ sender: UIButton) {
-        print("hello")
+        
         controllTraficLightButtonText.setTitle("NEXT", for: .normal)
+        
         redTraficLightView.layer.opacity = stop
         yellowTraficLightView.layer.opacity = attention
         greenTraficLightView.layer.opacity = go
+        
         if stop == on {
             attention = on
             stop = off

@@ -56,9 +56,9 @@
 		2E4EFEC324759C0E00CDF550 /* HomeWork_2_1_1 */ = {
 			isa = PBXGroup;
 			children = (
+				2E4EFEC824759C0E00CDF550 /* ViewController.swift */,
 				2E4EFEC424759C0E00CDF550 /* AppDelegate.swift */,
 				2E4EFEC624759C0E00CDF550 /* SceneDelegate.swift */,
-				2E4EFEC824759C0E00CDF550 /* ViewController.swift */,
 				2E4EFECA24759C0E00CDF550 /* Main.storyboard */,
 				2E4EFECD24759C1200CDF550 /* Assets.xcassets */,
 				2E4EFECF24759C1200CDF550 /* LaunchScreen.storyboard */,

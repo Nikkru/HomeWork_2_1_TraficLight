@@ -38,7 +38,6 @@
                                     </view>
                                 </subviews>
                                 <constraints>
-                                    <constraint firstAttribute="width" secondItem="uCF-hc-chh" secondAttribute="height" multiplier="30:97" id="909-3Q-fFn"/>
                                     <constraint firstItem="pT5-kr-4wb" firstAttribute="width" secondItem="pT5-kr-4wb" secondAttribute="height" multiplier="1:1" id="pvY-nU-xRc"/>
                                 </constraints>
                             </stackView>
@@ -59,6 +58,7 @@
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="uCF-hc-chh" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.683099" id="0wq-ng-dcf"/>
                             <constraint firstItem="uCF-hc-chh" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="40" id="2iL-ts-FRE"/>
                             <constraint firstItem="Dw4-eN-gdc" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="91J-ga-SNU"/>
                             <constraint firstItem="uCF-hc-chh" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Xhc-om-zWX"/>

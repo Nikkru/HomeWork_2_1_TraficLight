@@ -8,13 +8,12 @@
 
 import UIKit
 
+
 class ViewController: UIViewController {
     
-    let off: Float = 0.2
-    let on: Float = 1.0
-    var go: Float = 0.2
-    var attention: Float = 0.2
-    var stop: Float = 1
+    private let off: CGFloat = 0.2
+    private let on: CGFloat = 1.0
+    private var traficLight = TraficLight.stop
     
     @IBOutlet weak var redTraficLightView: UIView!
     @IBOutlet weak var yellowTraficLightView: UIView!
@@ -23,34 +22,34 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        redTraficLightView.layer.opacity = off
-        yellowTraficLightView.layer.opacity = off
-        greenTraficLightView.layer.opacity = off
-        
+        redTraficLightView.alpha = off
+        yellowTraficLightView.alpha = off
+        greenTraficLightView.alpha = off
+    }
+    override func viewWillLayoutSubviews() {
         redTraficLightView.layer.cornerRadius = CGFloat(Int(redTraficLightView.frame.size.height)/2)
         yellowTraficLightView.layer.cornerRadius = CGFloat(Int(yellowTraficLightView.frame.size.height)/2)
         greenTraficLightView.layer.cornerRadius = CGFloat(Int(greenTraficLightView.frame.size.height)/2)
     }
-    
     @IBAction func controllTraficLightButton(_ sender: UIButton) {
         
         controllTraficLightButtonText.setTitle("NEXT", for: .normal)
         
-        redTraficLightView.layer.opacity = stop
-        yellowTraficLightView.layer.opacity = attention
-        greenTraficLightView.layer.opacity = go
-        
-        if stop == on {
-            attention = on
-            stop = off
-        } else if attention == on {
-            go = on
-            attention = off
-        } else if go == on {
-            stop = on
-            go = off
+        switch traficLight {
+        case .stop:
+            greenTraficLightView.alpha = off
+            redTraficLightView.alpha = on
+            traficLight = .attantion
+        case .attantion:
+            redTraficLightView.alpha = off
+            yellowTraficLightView.alpha = on
+            traficLight = .go
+        case .go:
+            yellowTraficLightView.alpha = off
+            greenTraficLightView.alpha = on
+            traficLight = .stop
         }
+
     }
     
 }
